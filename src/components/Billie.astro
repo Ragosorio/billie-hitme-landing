@@ -1,7 +1,6 @@
 <div class="w-6/12 absolute z-10 top-72">
   <img
-    class="img-billie w-full"
-	id="billie"
+    class="img-billie w-full billie"
     src="/BILLIE-EILISH-PERSON.webp"
     alt="billie eilish"
     draggable="false"
@@ -37,11 +36,9 @@
 </style>
 
 <script>
-	document.addEventListener('DOMContentLoaded', function() {
-      const billie = document.getElementById("billie");
-      billie.addEventListener('animationend', function() {
+      const billie = document.getElementByClassName("billie");
+      billie.addEventListener('animationend', () => {
         billie.classList.remove('img-billie');
         billie.classList.add('move');
       });
-    });
 </script>
