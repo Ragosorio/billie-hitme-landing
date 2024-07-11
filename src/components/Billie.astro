@@ -1,6 +1,6 @@
-<div class="w-6/12 absolute z-10 top-72">
+<div class="w-6/12 absolute z-10 top-72" data-image-billie>
   <img
-    class="img-billie w-full billie"
+    class="img-billie w-full"
     src="/BILLIE-EILISH-PERSON.webp"
     alt="billie eilish"
     draggable="false"
@@ -36,9 +36,11 @@
 </style>
 
 <script>
-      const billie = document.querySelectorAll("img.billie");
-      billie.addEventListener('animationend', () => {
-        billie.classList.remove('img-billie');
-        billie.classList.add('move');
-      });
+      const billie = document.querySelectorAll("[data-image-billie]");
+      billie.forEach((bill) => {
+        bill.addEventListener("animationend",() => {
+          bill.classList.add("move")
+          bill.classList.remove("img-billie")
+        })
+      })
 </script>
