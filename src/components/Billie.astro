@@ -1,0 +1,47 @@
+<div class="w-6/12 absolute z-10 top-72">
+  <img
+    class="img-billie w-full"
+	id="billie"
+    src="/BILLIE-EILISH-PERSON.webp"
+    alt="billie eilish"
+    draggable="false"
+  />
+</div>
+
+<style>
+  @keyframes Caida {
+    0% {
+      transform: translateY(-1000px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  @keyframes Bounce {
+    0% {
+      transform: translateY(16px);
+    }
+    50% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(16px);
+    }
+  }
+  .img-billie {
+    animation: Caida 3.5s ease forwards;
+  }
+  .move{
+    animation: Bounce 3.5s ease infinite forwards;
+  }
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+      const billie = document.getElementById("billie");
+      billie.addEventListener('animationend', function() {
+        billie.classList.remove('img-billie');
+        billie.classList.add('move');
+      });
+    });
+</script>
