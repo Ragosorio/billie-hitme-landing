@@ -18,20 +18,26 @@
   }
   @keyframes Bounce {
     0% {
+      transform: translateY(0px);
+    }
+    25% {
       transform: translateY(16px);
     }
     50% {
       transform: translateY(0px);
     }
-    100% {
+    75% {
       transform: translateY(16px);
+    }
+    100{
+      transform: translateY(0px);
     }
   }
   .img-billie {
     animation: Caida 3.5s ease forwards;
   }
   .move{
-    animation: Bounce 3.5s ease infinite forwards;
+    animation: Bounce 7s ease infinite forwards;
   }
 </style>
 
